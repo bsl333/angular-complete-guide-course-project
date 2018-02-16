@@ -1,0 +1,16 @@
+<app-header
+	(recipeClicked)="headerClicked($event)"
+	(shoppingListClicked)="headerClicked($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+			<hr>
+			<app-recipes *ngIf="isRecipe"></app-recipes>
+			<hr>
+			<app-shopping-list *ngIf="isShoppingList"></app-shopping-list>
+    </div>
+  </div>
+</div>
+
+
+
