@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isRecipe: boolean = false;;
-  isShoppingList: boolean = false;
-  headerClicked(headerData) {
-    this.isRecipe = headerData.isRecipe;
-    this.isShoppingList = headerData.isShoppingList;
-  }
+  // isRecipe: boolean = false;;
+  // isShoppingList: boolean = false;
+  // headerClicked(headerData) {
+  //   this.isRecipe = headerData.isRecipe;
+  //   this.isShoppingList = headerData.isShoppingList;
+  // }
 
 }
