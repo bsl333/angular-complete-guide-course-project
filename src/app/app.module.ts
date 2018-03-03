@@ -21,6 +21,7 @@ import { RecipesService } from './recipes/recipes.service';
 
 // Routes
 import { AppRoutingModule } from './app-routing.module';
+import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 
 
 
@@ -36,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     RecipeItemComponent,
     RecipeDetailComponent,
     HeaderComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipesStartComponent
   ],
   imports: [
     BrowserModule,

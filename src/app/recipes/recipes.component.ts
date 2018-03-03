@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { RecipesService } from './recipes.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipes',
@@ -11,14 +12,19 @@ import { RecipesService } from './recipes.service';
 
 export class RecipesComponent implements OnInit{
   selectedRecipe: Recipe;
+  recipeIndex: number;
 
-  constructor(private recipeService: RecipesService) { }
+  constructor(private recipeService: RecipesService,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.recipeService.recipeSelected
       .subscribe(
         (recipe: Recipe) => {
           this.selectedRecipe = recipe;
+          this.recipeIndex = this.recipeService.getRecipes().indexOf(this.selectedRecipe);
+          this.router.navigate([this.recipeIndex], {relativeTo: this.route})
         }
       );
   }
